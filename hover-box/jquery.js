@@ -41,18 +41,18 @@ $(document).ready(function() {
         $('.content-' + i).mousedown(function() {
             var randomColor = generateRandomColor();
             gsap.to(this, {
-                duration: 2,
+                duration: .7,
 
-                'rotateY': '-180deg'
+                'rotateX': '-180deg'
             });
         });
 
         $('.content-' + i).mouseup(function() {
             var randomColor = generateRandomColor();
             gsap.to(this, {
-                duration: 2,
+                duration: .7,
 
-                'rotateY': '0deg'
+                'rotateX': '0deg'
             });
 
         });
