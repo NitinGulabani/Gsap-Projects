@@ -9,26 +9,26 @@ $(document).ready(function() {
     }
 
     for (var i = 1; i <= 9; i++) {
-        $('.content-' + i).hover(function() {
-            var randomColor = generateRandomColor();
-            // over
-            gsap.to(this, {
-                duration: .5,
-                opacity: 1,
-                rotate: 90,
-                'background-color': randomColor
-            });
-        }, function() {
-            var randomColor = generateRandomColor();
-            // out
-            gsap.to(this, {
-                duration: .5,
-                rotate: 0,
-                opacity: 1,
-                'background-color': randomColor
-            });
+        // $('.content-' + i).hover(function() {
+        //     var randomColor = generateRandomColor();
+        //     // over
+        //     gsap.to(this, {
+        //         duration: .5,
+        //         opacity: 1,
+        //         rotate: 90,
+        //         'background-color': randomColor
+        //     });
+        // }, function() {
+        //     var randomColor = generateRandomColor();
+        //     // out
+        //     gsap.to(this, {
+        //         duration: .5,
+        //         rotate: 0,
+        //         opacity: 1,
+        //         'background-color': randomColor
+        //     });
 
-        });
+        // });
         $('.content-' + i).click(function(e) {
             var randomColor = generateRandomColor();
             gsap.to(this, {
@@ -42,17 +42,18 @@ $(document).ready(function() {
             var randomColor = generateRandomColor();
             gsap.to(this, {
                 duration: .7,
-
-                'rotateX': '-180deg'
+                scale: 0.0,
+                ease: 'Rough',
+                rotate: 360
             });
         });
 
-        $('.content-' + i).mouseup(function() {
+        $('.content-' + i).mouseleave(function() {
             var randomColor = generateRandomColor();
             gsap.to(this, {
                 duration: .7,
-
-                'rotateX': '0deg'
+                scale: 1,
+                rotate: 0
             });
 
         });
